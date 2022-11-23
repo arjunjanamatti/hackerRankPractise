@@ -17,16 +17,9 @@ def compareTriplets(a,b):
     ab = [cd for cd in [1 if a[index] > b[index] else (-1 if a[index] == b[index] else 0)
           for index, f in enumerate(a)] if cd != -1]
     ba = [0 if ef == 1 else 1 for ef in ab]
-    return ab,ba
+    return sum(ab),sum(ba)
 
 if __name__ == "__main__":
     a = list(map(int, input().rstrip().split()))
     b = list(map(int, input().rstrip().split()))
-    # a = [1, 2, 3]
-    # b = [3, 2, 1]
-    # # ab = [1 for index,f in enumerate(a)
-    # #       if a[index] > b[index] ]
-    # ab = [cd for cd in [1 if a[index] > b[index] else (-1 if a[index] == b[index] else 0)
-    #       for index, f in enumerate(a)] if cd != -1]
-    # ba = [0 if ef == 1 else 1 for ef in ab]
-    # print([sum(ab), sum(ba)])
+    print(compareTriplets(a,b))
