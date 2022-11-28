@@ -6,7 +6,12 @@
 #  = 3 + 5+ 9 = 17. Their absolute difference is |15 - 17| = 2
 
 def diagonalDifference(arr):
-    pass
+    leftdiag = rightdiag = 0
+    for i in range(n):
+        leftdiag += arr[i][i]
+        rightdiag += arr[i][n-1-i]
+
+    return abs(leftdiag - rightdiag)
 
 
 
